@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 const colors = require('colors');
+require('dotenv').config();
 
 const connectDatabase = async () => {
   try {
     mongoose.set('strictQuery', true);
-    const connection = await mongoose.connect("mongodb+srv://gyaneshwer0001:gyaneshwer0001@cluster0.zpbmyjw.mongodb.net/campusdb?retryWrites=true&w=majority&appName=Cluster0");
+    const connection = await mongoose.connect(process.env.DB_URI);
     console.log(
       `MongoDB Connected: ${connection.connection.host}`.cyan.underline
     );

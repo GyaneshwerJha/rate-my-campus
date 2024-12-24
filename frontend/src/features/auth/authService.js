@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const API_ENDPOINT = import.meta.env.VITE_API_URL;
-const API_ENDPOINT = 'http://localhost:5000';
+const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
 
 // Register user
 const register = async (userData) => {
