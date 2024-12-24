@@ -1,7 +1,9 @@
 import axios from 'axios';
+import dotenv from 'dotenv';
 
+// dotenv.config();
 // const API_ENDPOINT = import.meta.env.VITE_API_URL;
-const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
+const API_ENDPOINT = import.meta.env.VITE_API_URL;
 
 // Register user
 const register = async (userData) => {

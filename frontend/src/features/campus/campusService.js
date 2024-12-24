@@ -1,7 +1,9 @@
 import axios from 'axios';
+import dotenv from 'dotenv';
 
+// dotenv.config();
 // const API_ENDPOINT = import.meta.env.VITE_API_URL;
-const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
+const API_ENDPOINT = import.meta.env.VITE_API_URL;
 // Get single campus
 const getCampus = async (id) => {
   const response = await axios.get(`${API_ENDPOINT}/api/campuses/${id}`);
